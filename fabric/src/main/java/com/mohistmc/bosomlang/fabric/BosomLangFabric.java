@@ -18,6 +18,6 @@ public class BosomLangFabric implements ModInitializer {
         String banner_lang = banneryml.getString("banner.lang", "xx_XX");
         String l = banner_lang.split("_")[0];
         String c = banner_lang.split("_")[1];
-        MSG = new Message(BosomLangFabric.class.getClassLoader(), new Locale(l, c));
+        MSG = new Message(this.getClass().getClassLoader(), new Locale(l, c));
     }
 }

@@ -11,11 +11,7 @@ public class MixinMinecraftServer {
 
     @ModifyConstant(method = "prepareLevels", remap = false, constant = @Constant(stringValue = "Preparing start region for dimension {}"))
     private String bosom$prepRegion(String constant) {
-        if (ServerHandleSwitcher.isBanner()) {
-            return "Preparing start region for dimension {}";// Bosom - do nothing
-        }else {
-            return ServerHandleSwitcher.getMSG().get("server.region.prepare");
-        }
+        return ServerHandleSwitcher.getMSG().get("server.region.prepare");
     }
 
     @ModifyConstant(method = "saveAllChunks", constant = @Constant(stringValue = "Saving chunks for level '{}'/{}"))
