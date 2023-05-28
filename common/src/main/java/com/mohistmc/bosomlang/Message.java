@@ -22,7 +22,7 @@ public class Message {
     private static InputStream inputStream;
 
     @SneakyThrows
-    public i18n(ClassLoader classLoader, Locale locale) {
+    public Message(ClassLoader classLoader, Locale locale) {
         this.locale = locale;
         String lang = "_" + locale.getLanguage() + "_" + locale.getCountry();
         InputStream deFinputStream = classLoader.getResourceAsStream("lang/" + properties + ".properties");
@@ -35,7 +35,6 @@ public class Message {
         }
         rb = new PropertyResourceBundle(new InputStreamReader(inputStream, StandardCharsets.UTF_8));
     }
-
 
     public String get(String key) {
         String string = rb.getString(key);
