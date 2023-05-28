@@ -9,7 +9,7 @@ import org.spongepowered.asm.mixin.injection.ModifyConstant;
 @Mixin(MinecraftServer.class)
 public class MixinMinecraftServer {
 
-    @ModifyConstant(method = "prepareLevels(Lnet/minecraft/server/level/progress/ChunkProgressListener;)V", remap = false, constant = @Constant(stringValue = "Preparing start region for dimension {}"))
+    @ModifyConstant(method = "prepareLevels", remap = false, constant = @Constant(stringValue = "Preparing start region for dimension {}"))
     private String bosom$prepRegion(String constant) {
         return ServerHandleSwitcher.getMSG().get("server.region.prepare");
     }
