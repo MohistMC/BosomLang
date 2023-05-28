@@ -22,7 +22,7 @@ public class Message {
     private static InputStream inputStream;
 
     @SneakyThrows
-    public Message(ClassLoader classLoader, Locale locale) {
+    public Message(Class<?> classLoader, Locale locale) {
         this.locale = locale;
         String lang = "_" + locale.getLanguage() + "_" + locale.getCountry();
         InputStream deFinputStream = classLoader.getResourceAsStream("/lang/" + properties + ".properties");
