@@ -1,6 +1,6 @@
 <div align="center">
 <img src="logo.png">
-  <h1>Mohist Banner 1.19.4</h1>
+  <h1>BosomLang 1.19.4</h1>
 
 ### A mod that localizes hardcoded info, supports Forge and Fabric
 [![](https://img.shields.io/jenkins/build?jobUrl=https%3A%2F%2Fci.codemc.io%2Fjob%2FMohistMC%2Fjob%2FBanner&label=Jenkins&logo=jenkins&logoColor=%23ffffff)](https://ci.codemc.io/job/MohistMC/job/Banner/)
