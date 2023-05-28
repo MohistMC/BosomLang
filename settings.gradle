@@ -4,6 +4,8 @@ pluginManagement {
         maven { url "https://maven.architectury.dev/" }
         maven { url "https://maven.minecraftforge.net/" }
         maven { url "https://repo.codemc.io/repository/nms/" }
+        maven { url "https://maven.mohistmc.com/"}
+        maven { url "https://hub.spigotmc.org/nexus/content/groups/public/"}
         gradlePluginPortal()
     }
 }
