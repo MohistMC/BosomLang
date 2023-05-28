@@ -37,12 +37,13 @@ allprojects {
             name = 'mohist'
             url = 'https://maven.mohistmc.com/'
         }
+        maven { url "https://repo.codemc.io/repository/nms/" }
     }
 
     dependencies {
         implementation 'org.projectlombok:lombok:1.18.26'
+        implementation 'com.mohistmc.yaml:yaml:0.3'
         annotationProcessor 'org.projectlombok:lombok:1.18.26'
-        compileOnly(fileTree("libs/banner-1.19.4-295.jar"))
     }
 
     tasks.withType(JavaCompile) {

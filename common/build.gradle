@@ -4,6 +4,7 @@ architectury {
 
 dependencies {
     modImplementation "net.fabricmc:fabric-loader:${rootProject.fabric_loader_version}"
+    implementation 'org.spigotmc:spigot:1.19.4-R0.1-SNAPSHOT'
 }
 
 publishing {
