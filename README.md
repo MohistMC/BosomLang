@@ -3,7 +3,7 @@
   <h1>BosomLang 1.19.4</h1>
 
 ### A mod that localizes hardcoded info, supports Forge and Fabric
-[![](https://img.shields.io/jenkins/build?jobUrl=https%3A%2F%2Fci.codemc.io%2Fjob%2FMohistMC%2Fjob%2FBanner&label=Jenkins&logo=jenkins&logoColor=%23ffffff)](https://ci.codemc.io/job/MohistMC/job/Banner/)
+[![](https://img.shields.io/jenkins/build?jobUrl=https%3A%2F%2Fci.codemc.io%2Fjob%2FMohistMC%2Fjob%2FBosomLang&label=Jenkins&logo=jenkins&logoColor=%23ffffff)](https://ci.codemc.io/job/MohistMC/job/BosomLang/)
 [![](https://img.shields.io/github/stars/MohistMC/BosomLang.svg?label=Stars&logo=github)](https://github.com/MohistMC/BosomLang/stargazers)
 [![](https://img.shields.io/badge/jdk-17.0.5+8-brightgreen.svg?colorB=469C00&logo=java)](https://adoptium.net/temurin/releases/?version=17)
 [![](https://img.shields.io/badge/Gradle-8.1.1-brightgreen.svg?colorB=469C00&logo=gradle)](https://docs.gradle.org/7.5.1/release-notes.html)
