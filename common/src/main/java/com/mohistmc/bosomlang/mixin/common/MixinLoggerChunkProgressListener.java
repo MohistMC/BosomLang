@@ -1,6 +1,6 @@
 package com.mohistmc.bosomlang.mixin.common;
 
-import com.mohistmc.bosomlang.BosomLangMod;
+import com.mohistmc.bosomlang.ServerHandleSwitcher;
 import net.minecraft.server.level.progress.LoggerChunkProgressListener;
 import net.minecraft.util.Mth;
 import org.slf4j.Logger;
@@ -23,11 +23,11 @@ public abstract class MixinLoggerChunkProgressListener {
             target = "Lorg/slf4j/Logger;info(Ljava/lang/String;)V",
             remap = false))
     private void bosom$i18nPrepArea(Logger instance, String s) {
-        LOGGER.info(BosomLangMod.MSG.get("world.preparingSpawn"), Mth.clamp(this.getProgress(), 0, 100));
+        LOGGER.info(ServerHandleSwitcher.getMSG().get("world.preparingSpawn"), Mth.clamp(this.getProgress(), 0, 100));
     }
 
     @ModifyConstant(method = "stop", constant = @Constant(stringValue = "Time elapsed: {} ms"))
     private String bosom$i18nTime(String constant) {
-        return BosomLangMod.MSG.get("world.time.elapsed");
+        return ServerHandleSwitcher.getMSG().get("world.time.elapsed");
     }
 }

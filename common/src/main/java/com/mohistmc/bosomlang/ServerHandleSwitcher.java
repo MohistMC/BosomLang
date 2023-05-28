@@ -18,4 +18,9 @@ public class ServerHandleSwitcher {
     public static boolean isMohist() {
         throw new AssertionError();
     }
+
+    @ExpectPlatform
+    public static Message getMSG() {
+        throw new AssertionError();
+    }
 }

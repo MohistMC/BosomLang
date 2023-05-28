@@ -21,7 +21,6 @@ dependencies {
     include "com.mohistmc.yaml:yaml:0.3"
     common(project(path: ":common", configuration: "namedElements")) { transitive false }
     shadowCommon(project(path: ":common", configuration: "transformProductionForge")) { transitive = false }
-
 }
 
 processResources {

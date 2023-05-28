@@ -1,5 +1,7 @@
 package com.mohistmc.bosomlang.forge;
 
+import com.mohistmc.bosomlang.BosomLangMod;
+import com.mohistmc.bosomlang.Message;
 import net.minecraftforge.fml.ModList;
 
 public class ServerHandleSwitcherImpl {
@@ -14,5 +16,9 @@ public class ServerHandleSwitcherImpl {
 
     public static boolean isMohist() {
         return ModList.get().isLoaded("mohist");
+    }
+
+    public static Message getMSG() {
+        return BosomLangForge.MSG;
     }
 }

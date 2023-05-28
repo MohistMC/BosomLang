@@ -1,5 +1,6 @@
 package com.mohistmc.bosomlang.fabric;
 
+import com.mohistmc.bosomlang.Message;
 import net.fabricmc.loader.api.FabricLoader;
 
 public class ServerHandleSwitcherImpl {
@@ -14,6 +15,10 @@ public class ServerHandleSwitcherImpl {
 
     public static boolean isMohist() {
         return false;
+    }
+
+    public static Message getMSG() {
+        return BosomLangFabric.MSG;
     }
 
 }

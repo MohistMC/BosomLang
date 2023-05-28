@@ -1,6 +1,6 @@
 package com.mohistmc.bosomlang.mixin.common;
 
-import com.mohistmc.bosomlang.BosomLangMod;
+import com.mohistmc.bosomlang.ServerHandleSwitcher;
 import net.minecraft.server.network.ServerConnectionListener;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.Constant;
@@ -11,11 +11,11 @@ public class MixinServerConnectionListener {
 
     @ModifyConstant(method = "startTcpServerListener", constant = @Constant(stringValue = "Using default channel type"))
     private String bosom$i18nChannel(String constant) {
-        return BosomLangMod.MSG.get("networksystem.2");
+        return ServerHandleSwitcher.getMSG().get("networksystem.2");
     }
 
     @ModifyConstant(method = "startTcpServerListener", constant = @Constant(stringValue = "Using epoll channel type"))
     private String bosom$i18nChannel1(String constant) {
-        return BosomLangMod.MSG.get("networksystem.1");
+        return ServerHandleSwitcher.getMSG().get("networksystem.1");
     }
 }
