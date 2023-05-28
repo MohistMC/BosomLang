@@ -1,27 +1,20 @@
 {
   "schemaVersion": 1,
-  "id": "examplemod",
+  "id": "bosomlang",
   "version": "${version}",
-  "name": "Example Mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "name": "BosomLang Mod",
+  "description": "A mod that localizes hardcoded info, supports Forge and Fabric",
   "authors": [
-    "Me!"
+    "wdog5"
   ],
-  "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
-  },
-  "license": "Insert License Here",
-  "icon": "assets/examplemod/icon.png",
+  "license": "LGPlv3",
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.examplemod.fabric.ExampleModFabric"
+      "com.mohistmc.bosomlang.fabric.BosomLangFabric"
     ]
   },
   "depends": {
-    "fabric": "*",
-    "minecraft": ">=1.19.4",
-    "architectury": ">=8.1.79"
+    "minecraft": ">=1.19.4"
   }
 }
