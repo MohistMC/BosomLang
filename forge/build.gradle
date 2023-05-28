@@ -10,8 +10,6 @@ architectury {
 configurations {
     common
     shadowCommon // Don't use shadow from the shadow plugin since it *excludes* files.
-    shade
-    implementation.extendsFrom shade
     compileClasspath.extendsFrom common
     runtimeClasspath.extendsFrom common
     developmentForge.extendsFrom common
@@ -20,9 +18,10 @@ configurations {
 dependencies {
     forge "net.minecraftforge:forge:${rootProject.forge_version}"
 
-    shade 'com.mohistmc.yaml:yaml:0.3'
+    include "com.mohistmc.yaml:yaml:0.3"
     common(project(path: ":common", configuration: "namedElements")) { transitive false }
     shadowCommon(project(path: ":common", configuration: "transformProductionForge")) { transitive = false }
+
 }
 
 processResources {
