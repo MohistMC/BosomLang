@@ -10,12 +10,12 @@ import org.spongepowered.asm.mixin.injection.ModifyConstant;
 @Mixin(MinecraftServer.class)
 public class MixinMinecraftServer {
 
-    @ModifyConstant(method = "prepareLevels", constant = @Constant(stringValue = "Preparing start region for dimension {}"))
+    @ModifyConstant(method = "prepareLevels", remap = false, constant = @Constant(stringValue = "Preparing start region for dimension {}"))
     private String bosom$prepRegion(String constant) {
-        if (!ServerHandleSwitcher.isBanner()) {
-            return BosomLangMod.MSG.get("server.region.prepare");
-        }else {
+        if (ServerHandleSwitcher.isBanner()) {
             return "Preparing start region for dimension {}";// Bosom - do nothing
+        }else {
+            return BosomLangMod.MSG.get("server.region.prepare");
         }
     }
 
