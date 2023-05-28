@@ -19,6 +19,6 @@ public class BosomLangForge {
         String banner_lang = mohistyml.getString("mohist.lang", "xx_XX");
         String l = banner_lang.split("_")[0];
         String c = banner_lang.split("_")[1];
-        BosomLangForge.MSG = new Message(BosomLangForge.class.getClassLoader(), new Locale(l, c));
+        BosomLangForge.MSG = new Message(new Locale(l, c));
     }
 }
