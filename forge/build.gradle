@@ -58,6 +58,11 @@ components.java {
 
 jar {
     archiveBaseName.set(project.name + "-" + project.version + "-forge")
+    manifest {
+        attributes(
+                'MixinConfigs':'bosomlang.mixins.json'
+        )
+    }
 }
 
 publishing {
