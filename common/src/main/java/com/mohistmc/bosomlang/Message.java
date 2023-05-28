@@ -22,11 +22,11 @@ public class Message {
     private static InputStream inputStream;
 
     @SneakyThrows
-    public Message(Locale locale) {
+    public Message(Class<?> clazz, Locale locale) {
         this.locale = locale;
         String lang = "_" + locale.getLanguage() + "_" + locale.getCountry();
-        InputStream deFinputStream = this.getClass().getResourceAsStream("lang/" + properties + ".properties");
-        inputStream = this.getClass().getResourceAsStream("lang/" + properties + lang + ".properties");
+        InputStream deFinputStream = clazz.getResourceAsStream("lang/" + properties + ".properties");
+        inputStream = clazz.getResourceAsStream("lang/" + properties + lang + ".properties");
         if (inputStream == null) {
             inputStream = deFinputStream;
         } else if (inputStream == null) {
