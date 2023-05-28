@@ -18,7 +18,6 @@ configurations {
 dependencies {
     forge "net.minecraftforge:forge:${rootProject.forge_version}"
 
-    include "org.yaml:snakeyaml:1.33"
     include "com.mohistmc.yaml:yaml:0.3"
     common(project(path: ":common", configuration: "namedElements")) { transitive false }
     shadowCommon(project(path: ":common", configuration: "transformProductionForge")) { transitive = false }
