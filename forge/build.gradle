@@ -2,6 +2,12 @@ plugins {
     id "com.github.johnrengelman.shadow" version "7.1.2"
 }
 
+loom {
+    forge {
+        mixinConfig "bosomlang.mixins.json"
+    }
+}
+
 architectury {
     platformSetupLoomIde()
     forge()
@@ -58,11 +64,6 @@ components.java {
 
 jar {
     archiveBaseName.set(project.name + "-" + project.version + "-forge")
-    manifest {
-        attributes(
-                'MixinConfigs':'bosomlang.mixins.json'
-        )
-    }
 }
 
 publishing {

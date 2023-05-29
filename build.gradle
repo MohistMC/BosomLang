@@ -19,7 +19,10 @@ subprojects {
     dependencies {
         minecraft "com.mojang:minecraft:${rootProject.minecraft_version}"
         // The following line declares the mojmap mappings, you may use other mappings as well
-        mappings loom.officialMojangMappings()
+        mappings loom.layered() {
+            officialMojangMappings()
+            parchment("org.parchmentmc.data:parchment-1.19.3:2023.03.12@zip")
+        }
     }
 }
 
@@ -37,6 +40,7 @@ allprojects {
             name = 'mohist'
             url = 'https://maven.mohistmc.com/'
         }
+        maven {	url "https://maven.parchmentmc.org" }
         maven { url "https://repo.codemc.io/repository/nms/" }
     }
 
