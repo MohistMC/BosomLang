@@ -4,6 +4,7 @@
   "package": "com.mohistmc.bosomlang.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
+    "bukkit.MixinSpigotConfig_Bukkit",
     "common.MixinAdvancementList",
     "common.MixinLoggerChunkProgressListener",
     "common.MixinRecipeManager",
