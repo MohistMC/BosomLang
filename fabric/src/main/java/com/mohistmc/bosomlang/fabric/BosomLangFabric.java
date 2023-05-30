@@ -5,7 +5,6 @@ import net.fabricmc.api.ModInitializer;
 
 import java.io.File;
 import java.util.Locale;
-import java.util.jar.JarFile;
 
 import com.mohistmc.yaml.file.YamlConfiguration;
 
