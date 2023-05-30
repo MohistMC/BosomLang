@@ -32,7 +32,7 @@ allprojects {
     apply plugin: "maven-publish"
 
     archivesBaseName = rootProject.archives_base_name
-    version = rootProject.mod_version
+    version = ci_version()
     group = rootProject.maven_group
 
     repositories {
@@ -58,5 +58,23 @@ allprojects {
 
     java {
         withSourcesJar()
+    }
+}
+
+import groovy.json.JsonSlurper
+
+static String ci_version() {
+    try {
+        def conn = new URL("https://ci.codemc.io/job/MohistMC/job/BosomLang/api/json").openConnection()
+        conn.setRequestProperty("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36")
+        conn.connect()
+        def root = conn.content.text
+        def jsonSluper = new JsonSlurper()
+
+        String data = jsonSluper.parseText(root)
+        def number = data.substring(data.indexOf("number")).split(",")
+        return Integer.valueOf(number[0].replace("number=", "")).intValue()
+    } catch (Exception ignored) {
+        return '1.19.4'
     }
 }
