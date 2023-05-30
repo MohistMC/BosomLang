@@ -16,7 +16,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import java.io.PrintStream;
 
 @Mixin(value = SpigotConfig.class, remap = false)
-public class MixinSpigotConfig_Bukkit {
+public class MixinSpigotConfig {
 
     @Shadow public static int playerSample;
 
