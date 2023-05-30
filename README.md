@@ -19,7 +19,7 @@
 Notice
 ------
 * [ ] This is a common i18n implementation between Banner and Mohist
-* [ ] It still ony use on Banner and Mohist at now.
+* [ ] It still only using on Banner and Mohist at now.
 
 A Special Thanks To:
 -------------
