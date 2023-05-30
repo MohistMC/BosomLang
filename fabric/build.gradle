@@ -56,7 +56,7 @@ publishing {
     publications {
         mavenFabric(MavenPublication) {
             groupId = 'com.mohistmc'
-            artifactId = 'bosomlang-1.19.4'
+            artifactId = 'bosomlang-1.19.4-fabric'
             version = "1.0.0"
             from components.java
         }
