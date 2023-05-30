@@ -7,7 +7,9 @@
     "bukkit.MixinSpigotConfig",
     "bukkit.MixinSpigotWorldConfig",
     "common.MixinAdvancementList",
+    "common.MixinDedicatedServer",
     "common.MixinLoggerChunkProgressListener",
+    "common.MixinMinecraftServer",
     "common.MixinRecipeManager",
     "common.MixinServerConnectionListener"
   ]
