@@ -55,13 +55,19 @@ allprojects {
         options.encoding = "UTF-8"
         options.release = 17
     }
-
-    java {
-        withSourcesJar()
-    }
 }
 
 import groovy.json.JsonSlurper
+
+static def getSubprojectVersion(project) {
+    def version = ci_version()
+
+    if (!version) {
+        throw new NullPointerException("Could not find version for " + project.name)
+    }
+
+    return version
+}
 
 static String ci_version() {
     try {
