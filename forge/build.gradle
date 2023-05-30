@@ -2,8 +2,6 @@ plugins {
     id "com.github.johnrengelman.shadow" version "7.1.2"
 }
 
-version = getSubprojectVersion(project)
-
 loom {
     forge {
         mixinConfig "bosomlang.mixins.json"
@@ -32,7 +30,7 @@ dependencies {
 }
 
 processResources {
-    inputs.property "version", version
+    inputs.property "version", project.version
 
     filesMatching("META-INF/mods.toml") {
         expand "version": project.version
@@ -56,10 +54,6 @@ components.java {
     withVariantsFromConfiguration(project.configurations.shadowRuntimeElements) {
         skip()
     }
-}
-
-jar {
-    archiveBaseName.set(project.name + "-" + project.version + "-forge")
 }
 
 publishing {
