@@ -10,10 +10,25 @@ import org.spongepowered.asm.mixin.injection.ModifyConstant;
 public class MixinMinecraftServer {
 
     @ModifyConstant(
-            method = "*",
+            method = "prepareLevels",
             constant = @Constant(stringValue = "Preparing start region for dimension {}"))
     private static String bosom$localPrepLevels(String constant) {
-        return ServerHandleSwitcher.getMSG().get("server.region.prepare");
+        if (ServerHandleSwitcher.isBanner()) {
+            return ServerHandleSwitcher.getMSG().get("server.region.prepare");
+        }else {
+            return "Preparing start region for dimension {}";
+        }
+    }
+
+    @ModifyConstant(
+            method = "*",
+            constant = @Constant(stringValue = "Preparing start region for dimension {}"))
+    private static String bosom$localPrepLevels0(String constant) {
+        if (ServerHandleSwitcher.isMohist()) {
+            return ServerHandleSwitcher.getMSG().get("server.region.prepare");
+        }else {
+            return "Preparing start region for dimension {}";
+        }
     }
 
     @ModifyConstant(method = "saveAllChunks", constant = @Constant(stringValue = "Saving chunks for level '{}'/{}"))
