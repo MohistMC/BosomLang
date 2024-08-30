@@ -40,6 +40,7 @@ allprojects {
         }
         maven {	url "https://maven.parchmentmc.org" }
         maven { url "https://repo.codemc.io/repository/nms/" }
+        maven { url "https://hub.spigotmc.org/nexus/content/groups/public/"}
     }
 
     dependencies {
